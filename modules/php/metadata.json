@@ -1,0 +1,44 @@
+{
+  "types": [
+
+  ],
+  "license": "Apache 2.0",
+  "source": "git://github.com/thias/puppet-php",
+  "dependencies": [
+
+  ],
+  "project_page": "https://github.com/thias/puppet-php",
+  "description": "Install and configure PHP for any of CLI, Apache httpd module and FastCGI.",
+  "checksums": {
+    "tests/module.pp": "461e492ab58e9777a3b09e7da5e69c54",
+    "templates/httpd/php.conf.orig": "50015ff8bb23090aae4f8556987c5e40",
+    "ChangeLog": "31b50fc8311abc1b387622140436fb66",
+    "manifests/fpm/daemon.pp": "3d26048d68defff02cc9d440f4700daa",
+    "tests/ini.pp": "6ccaff70f981929198f22e398beca6ff",
+    "LICENSE": "99219472697a01561e7630d63aaecdc1",
+    "manifests/module.pp": "4c1bb65b6fe43277b33ca20c20da6155",
+    "Modulefile": "08b919db34734f506660a403371ab5ff",
+    "tests/mod_php5.pp": "ff071f8ba0eb1a2b90e71a6de246df30",
+    "README.md": "a0833b5a31b5be12c9c3c74a284c7e7e",
+    "manifests/ini.pp": "d8327350b7ba1e272ce99aee1f9d2adb",
+    "manifests/mod_php5.pp": "b6dafd25aae2f12e2306e15565747fc3",
+    "tests/fpm/daemon.pp": "6804b102876223b40b3382668bf61434",
+    "tests/cli.pp": "4acf74bcea023f76f2e9eb7acf38bbb3",
+    "templates/php.ini-el6.orig": "a82c6a40a5bbd7188c2cbd81d98e5faa",
+    "templates/php.ini-el6.erb": "b3bad69af795150935bc94bb29d69f46",
+    "manifests/common.pp": "a44aacd2abb6ba24bbc1678e1d986bdd",
+    "manifests/fpm/conf.pp": "8f0165fbfce540df27e988125e68a8ee",
+    "tests/fpm/conf.pp": "8ab22d2e1e3821072e57c30734de70cd",
+    "manifests/module/ini.pp": "80507452ccdc91d8725b5a9c57c3b8b6",
+    "manifests/cli.pp": "0821e7f598d14d80808d67a44c037922",
+    "tests/module/ini.pp": "ba5ad8ccc8bf36c6a4f513c8498262d8",
+    "templates/httpd/php.conf.erb": "8dcf1861fcb2b46027df55c86b4fc85d",
+    "templates/module.ini.erb": "0bc70f1c763fb938c953df90622f0ae4",
+    "templates/fpm/pool.conf.erb": "714e370ddc8e2ee93a5bb6f321e304f6",
+    "templates/fpm/php-fpm.conf.erb": "bf22d5060f5ed3f30b9fb472415dc8f0"
+  },
+  "summary": "PHP module",
+  "name": "thias-php",
+  "author": "Matthias Saou",
+  "version": "0.2.4"
+}
