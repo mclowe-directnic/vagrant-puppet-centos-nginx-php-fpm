@@ -43,42 +43,11 @@ class iptables {
 }
 class { 'iptables': }
 
-# MySQL packages and some configuration to automatically create a new database.
-class { 'mysql': }
-
 # PhpMyAdmin
 class { 'phpmyadmin': }
 
 # Imagick
 class { 'imagemagick': }
-
-class { 'mysql::server':
-	config_hash => {
-		root_password 	=> '1234',
-		log_error 	=> '/logs/mysql',
-		default_engine	=> 'InnoDB'
-	}
-}
-
-Database {
-	require => Class['mysql::server'],
-}
-
-#database { 'myDB':
-#  ensure => 'present',
-#  charset => 'utf8',
-#}
-
-#database_user { 'myUser@localhost':
-#  password_hash => mysql_password('myPassword')
-#}
-
-#database_grant { 'myUser@localhost/myDB':
-#  privileges => ['all'] ,
-#}
-
-$additional_mysql_packages = [ "mysql-devel", "mysql-libs" ]
-package { $additional_mysql_packages: ensure => present }
 
 include nginx
 nginx::file { 'default.conf':
@@ -102,30 +71,6 @@ php::fpm::conf { 'www':
     require => Package['nginx'],
 }
 php::module { [ 'devel', 'pear', 'mysql', 'mbstring', 'xml', 'gd', 'tidy', 'pecl-apc', 'pecl-memcache', 'pecl-imagick']: }
-
-# Redis installation.
-class redis {
-    package { "redis":
-        ensure => 'latest',
-	require => Yumrepo['epel'],
-    }
-    service { "redis":
-        enable => true,
-        ensure => running,
-    }
-}
-include redis
-
-# Java
-class java {
-    package { 'java-1.6.0-openjdk':
-	require => Yumrepo['epel'],
-    }
-    package { 'java-1.6.0-openjdk-devel':
-	require => Yumrepo['epel'],
-    }
-}
-include java
 
 # PHPUnit
 exec { '/usr/bin/pear upgrade pear':

@@ -11,11 +11,12 @@ server {
     #access_log  logs/host.access.log  main;
 
     location / {
-        root   /www;
+        root   /www/web/frontend;
         index  index.php index.html;
     }
 
     location ~ \.php$ {
+        root   /www/web/frontend;
         if (!-f $request_filename) { return 404; }
         include /etc/nginx/fastcgi.conf;
         fastcgi_pass wwwbackend;

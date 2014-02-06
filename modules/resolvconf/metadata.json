@@ -1,0 +1,25 @@
+{
+  "project_page": "https://github.com/thias/puppet-resolvconf",
+  "license": "Apache 2.0",
+  "source": "git://github.com/thias/puppet-resolvconf",
+  "checksums": {
+    "templates/resolv.conf.erb": "1ffb28d62d45bebc9fe9f1a3648d7ee7",
+    "LICENSE": "83e46d88c72d131428fd758472adc03a",
+    "manifests/init.pp": "ce3a756e6114a565b9f82be5c48707be",
+    "Modulefile": "2e3c569d6da9ac4c4844c8a1397d7cd6",
+    "ChangeLog": "8eb15f30aaae79646629c639b665dc48",
+    "README.md": "22fb6b9d7c6501b13cd9663c38e1f160",
+    "tests/init.pp": "4675bc38bdfec281e323a6493dc98528"
+  },
+  "description": "Manage /etc/resolv.conf with Puppet",
+  "version": "0.0.3",
+  "types": [
+
+  ],
+  "summary": "/etc/resolv.conf module",
+  "name": "thias-resolvconf",
+  "author": "Matthias Saou",
+  "dependencies": [
+
+  ]
+}
